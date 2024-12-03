@@ -9,7 +9,7 @@ def main_menu():
                 "What would you like to do? "
                 "Add a new contact(1), Edit an existing contact(2), Delete a contact(3), "
                 "Search for a contact(4), Display all contacts(5), Export contacts to a text file(6), "
-                "Import contacts from a text file(7), Quit(8): "
+                "Quit(7): "
             ))
             if first_choice == 1:
                 add_contact()
@@ -22,10 +22,8 @@ def main_menu():
             elif first_choice == 5:
                 display_contacts()
             elif first_choice == 6:
-                export_contacts()
+                export_contacts()            
             elif first_choice == 7:
-                import_contacts()
-            elif first_choice == 8:
                 print("Thanks for using our phonebook!")
                 break
         except ValueError:
@@ -116,5 +114,5 @@ def export_contacts():
             print(f"An error occurred while writing to the file: {e}")
     else:
         print("The phonebook is empty. No contacts to export.")
-
+        
 main_menu()
